@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "개발 노트"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "개발 노트"
+name                     : "Your Name"
 description              : "An amazing website."
 url                      : "https://hcw-code.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -107,7 +107,7 @@ author:
   name             : "홍찬우"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "깃허브 블로그"
-  location         : "Seoul"
+  location         : "Somewhere"
   email            : "jingi6052@naver.com"
   links:
     - label: "Email"
