@@ -2,7 +2,7 @@
 layout: single
 title: "macOS에서 git 설정"
 categories: Git/Github
-tag: git, github
+tag: [git, github]
 ---
 
 $ git --version<br>
