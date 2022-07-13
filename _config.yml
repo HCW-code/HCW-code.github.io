@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Site Title"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
+name                     : "개발 노트"
 description              : "An amazing website."
 url                      : "https://hcw-code.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -104,11 +104,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "홍찬우"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "깃허브 블로그"
+  location         : "Seoul"
+  email            : "jingi6052@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
