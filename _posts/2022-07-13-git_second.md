@@ -3,11 +3,11 @@ layout: single
 title: "macOS에서 git 설정"
 ---
 
-$ git --version
+$ git --version<br>
 git이 설치되었는지 확인 및 버전 확인
 
-$ git 설치 후 설정
-$ git config --global user.name "나의 사용자 이름"
+$ git 설치 후 설정<br>
+$ git config --global user.name "나의 사용자 이름"<br>
 $ git config --global "내 이메일 주소"
 
 
@@ -15,8 +15,9 @@ $ git config --global "내 이메일 주소"
 
  
 
-**SSH 등록 및 SSH를 이용한 git clone**
--SSH 등록
--SSH 키 생성 => 생성된 공개키 복사 => github Settings => SSH and GPG -keys => New SSH key에 공개키 붙여넣기
--Clone
--그 후 Code버튼의 SSH탭 선택 => 복사 => 터미널에 git clone 명령어 후 붙여넣기
+**SSH 등록 및 SSH를 이용한 git clone**<br>
+-SSH 등록<br>
+-SSH 키 생성 => 생성된 공개키 복사 => github Settings => SSH and GPG<br>
+-keys => New SSH key에 공개키 붙여넣기<br>
+-Clone<br>
+-그 후 Code버튼의 SSH탭 선택 => 복사 => 터미널에 git clone 명령어 후 붙여넣기<br>
