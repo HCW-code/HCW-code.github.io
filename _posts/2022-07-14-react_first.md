@@ -30,33 +30,33 @@ JSX는 JavaScript에서 확장된 문법이지만 브라우저가 바로 실행�
 **JSX 규칙**
 - JSX에서 여러 엘리먼트를 작성하고자 하는 경우, 최상위에서 opening tag와 closing tag로 감싸주어야 한다.<br>
 <center>
-<img width="639" alt="elements" src="https://user-images.githubusercontent.com/72719325/178930949-957594f3-24d6-4d44-b49b-6e7349098d85.png">
+<img width="350" alt="elements" src="https://user-images.githubusercontent.com/72719325/178930949-957594f3-24d6-4d44-b49b-6e7349098d85.png">
 </center><br>
 - React에서 HTML class 속성을 지정하려면 "className"으로 표기해야 한다.<br>
 <center>
-<img width="624" alt="className" src="https://user-images.githubusercontent.com/72719325/178930941-f2ab6b63-f055-49b8-aa42-e56e38fd5c6a.png">
+<img width="400" alt="className" src="https://user-images.githubusercontent.com/72719325/178930941-f2ab6b63-f055-49b8-aa42-e56e38fd5c6a.png">
 </center><br>
 - JSX에서 JavaScript를 쓰고자 한다면 꼭 중괄호를 이용해야 한다.<br>
 <center>
-<img width="317" alt="mid" src="https://user-images.githubusercontent.com/72719325/178930954-e956971c-0b69-4c57-a33e-717db874063b.png"></center><br>
+<img width="200" alt="mid" src="https://user-images.githubusercontent.com/72719325/178930954-e956971c-0b69-4c57-a33e-717db874063b.png"></center><br>
 - 사용자 정의 컴포넌트는 대문자로 시작한다.<br>
 <center>
-<img width="632" alt="capital" src="https://user-images.githubusercontent.com/72719325/178930926-337f567c-80f4-41fb-ac9b-82397da0ff82.png"></center><br>
+<img width="450" alt="capital" src="https://user-images.githubusercontent.com/72719325/178930926-337f567c-80f4-41fb-ac9b-82397da0ff82.png"></center><br>
 - 조건부 렌더링에는 삼항연산자를 사용해야 한다.<br>
 <center>
-<img width="560" alt="if" src="https://user-images.githubusercontent.com/72719325/178930952-98c376c3-0648-4eb2-a2e1-f5d7a08cec28.png"></center><br>
+<img width="300" alt="if" src="https://user-images.githubusercontent.com/72719325/178930952-98c376c3-0648-4eb2-a2e1-f5d7a08cec28.png"></center><br>
 - 여러 개의 HTML엘리먼트를 표시할 때, map()함수를 이용한다.<br>
 <center>
-<img width="542" alt="map" src="https://user-images.githubusercontent.com/72719325/178931637-5707cfe2-bdeb-42d4-8acc-1d369f4c8dd9.png"></center>
+<img width="350" alt="map" src="https://user-images.githubusercontent.com/72719325/178931637-5707cfe2-bdeb-42d4-8acc-1d369f4c8dd9.png"></center>
 
-**예시**
+**예시**<br>
 map을 이용한 반복<br>
-<center>
-<img width="524" alt="map_ex" src="https://user-images.githubusercontent.com/72719325/178932736-34d8048c-494e-4692-b58d-d5a70f640e0e.png"><br>
-함수를 나눴을 때<br>
-<img width="551" alt="map_ex1png" src="https://user-images.githubusercontent.com/72719325/178932747-65706124-980c-4ce4-a225-d3e9a0ae43a9.png"><br>
-함수를 나누지 않고 return문 안에 인라인으로 처리할ㄷ 때
-</center>
+
+<img width="250" alt="map_ex" src="https://user-images.githubusercontent.com/72719325/178932736-34d8048c-494e-4692-b58d-d5a70f640e0e.png">
+[함수를 나눴을 때]<br>
+<img width="250" alt="map_ex1png" src="https://user-images.githubusercontent.com/72719325/178932747-65706124-980c-4ce4-a225-d3e9a0ae43a9.png">
+[return문 안에 인라인으로 처리할 때]
+
 
 
 
