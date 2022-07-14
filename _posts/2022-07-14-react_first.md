@@ -54,7 +54,7 @@ JSX는 JavaScript에서 확장된 문법이지만 브라우저가 바로 실행�
 map을 이용한 반복<br>
 
 <center><div><img width="300" alt="map_ex" src="https://user-images.githubusercontent.com/72719325/178932736-34d8048c-494e-4692-b58d-d5a70f640e0e.png">
-[함수를 나눴을 때]</div></cetner>
+[함수를 나눴을 때]</div></center>
 <center><div><img width="300" alt="map_ex1png" src="https://user-images.githubusercontent.com/72719325/178932747-65706124-980c-4ce4-a225-d3e9a0ae43a9.png">
 [return문 안에 인라인으로 처리할 때]</div></center>
 
