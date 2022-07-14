@@ -39,7 +39,7 @@ JSX는 JavaScript에서 확장된 문법이지만 브라우저가 바로 실행�
 </center><br>
 - JSX에서 JavaScript를 쓰고자 한다면 꼭 중괄호를 이용해야 한다.<br>
 <center>
-<img width="250" alt="mid" src="https://user-images.githubusercontent.com/72719325/178930954-e956971c-0b69-4c57-a33e-717db874063b.png"></center><br>
+<img width="270" alt="mid" src="https://user-images.githubusercontent.com/72719325/178937034-0fd11f83-cdb6-46b4-9ff2-ba68a2dbfd74.png"></center><br>
 - 사용자 정의 컴포넌트는 대문자로 시작한다.<br>
 <center>
 <img width="450" alt="capital" src="https://user-images.githubusercontent.com/72719325/178930926-337f567c-80f4-41fb-ac9b-82397da0ff82.png"></center><br>
