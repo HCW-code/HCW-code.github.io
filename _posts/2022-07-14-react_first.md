@@ -25,7 +25,8 @@ Facebook에서 관리하여 안정적이고, 가장 유명하며, 리액트 네�
 
 **JSX**
 JSX는 JavaScript에서 확장된 문법이지만 브라우저가 바로 실행할 수 있는 Javascript코드가 아니다. 그래서 Babel을 이용하여 JSX를 브라우저가 이해할 수 있는 JavaScript파일로 컴파일한다.<br>
-<img width="450" alt="babel" src="https://user-images.githubusercontent.com/72719325/178930918-1fd7fa83-9720-4eb2-acd5-272f85c88161.png"><br>
+<center>
+<img width="450" alt="babel" src="https://user-images.githubusercontent.com/72719325/178930918-1fd7fa83-9720-4eb2-acd5-272f85c88161.png"></center><br>
 
 **JSX 규칙**
 - JSX에서 여러 엘리먼트를 작성하고자 하는 경우, 최상위에서 opening tag와 closing tag로 감싸주어야 한다.<br>
@@ -38,7 +39,7 @@ JSX는 JavaScript에서 확장된 문법이지만 브라우저가 바로 실행�
 </center><br>
 - JSX에서 JavaScript를 쓰고자 한다면 꼭 중괄호를 이용해야 한다.<br>
 <center>
-<img width="250"alt="mid" src="https://user-images.githubusercontent.com/72719325/178930954-e956971c-0b69-4c57-a33e-717db874063b.png"></center><br>
+<img width="250" alt="mid" src="https://user-images.githubusercontent.com/72719325/178930954-e956971c-0b69-4c57-a33e-717db874063b.png"></center><br>
 - 사용자 정의 컴포넌트는 대문자로 시작한다.<br>
 <center>
 <img width="450" alt="capital" src="https://user-images.githubusercontent.com/72719325/178930926-337f567c-80f4-41fb-ac9b-82397da0ff82.png"></center><br>
@@ -52,10 +53,10 @@ JSX는 JavaScript에서 확장된 문법이지만 브라우저가 바로 실행�
 **예시**<br>
 map을 이용한 반복<br>
 
-<img width="300" alt="map_ex" src="https://user-images.githubusercontent.com/72719325/178932736-34d8048c-494e-4692-b58d-d5a70f640e0e.png">
-[함수를 나눴을 때]<br>
-<img width="300" alt="map_ex1png" src="https://user-images.githubusercontent.com/72719325/178932747-65706124-980c-4ce4-a225-d3e9a0ae43a9.png">
-[return문 안에 인라인으로 처리할 때]
+<center><div><img width="300" alt="map_ex" src="https://user-images.githubusercontent.com/72719325/178932736-34d8048c-494e-4692-b58d-d5a70f640e0e.png">
+[함수를 나눴을 때]</div></cetner>
+<center><div><img width="300" alt="map_ex1png" src="https://user-images.githubusercontent.com/72719325/178932747-65706124-980c-4ce4-a225-d3e9a0ae43a9.png">
+[return문 안에 인라인으로 처리할 때]</div></center>
 
 
 
