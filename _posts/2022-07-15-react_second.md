@@ -1,6 +1,12 @@
-줄바꿈이 될까 그냥 엔터
+---
+layout: single
+title: "[React] SPA"
+categories: React
+tag: [react, javascript, spa]
+---
 
-줄바꿈이 될까 쉬프트
-엔터 폴더 이동??
+SPA(Single Page Application  
+hellog
 
-![asdasd](../images/2022-07-15-react_second/asdasd.png)
+
+
