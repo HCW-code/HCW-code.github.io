@@ -3,4 +3,4 @@
 줄바꿈이 될까 쉬프트
 엔터
 
-![123123](images/2022-07-15-react_second/123123-7877358.png)
+![asdasd](../images/2022-07-15-react_second/asdasd.png)
