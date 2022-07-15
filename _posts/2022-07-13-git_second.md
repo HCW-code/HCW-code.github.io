@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "macOS에서 git 설정"
+title: "[Git] macOS에서 git 설정"
 categories: Git/Github
 tag: [git, github]
 ---
