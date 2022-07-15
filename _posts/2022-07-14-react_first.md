@@ -57,10 +57,3 @@ map을 이용한 반복<br>
 [함수를 나눴을 때]</div></center><br>
 <center><div><img width="300" alt="map_ex1png" src="https://user-images.githubusercontent.com/72719325/178932747-65706124-980c-4ce4-a225-d3e9a0ae43a9.png"><br>
 [return문 안에 인라인으로 처리할 때]</div></center>
-
-
-
-
-
-
-
