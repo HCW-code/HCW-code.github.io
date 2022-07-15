@@ -5,17 +5,19 @@ categories: React
 tag: [react, javascript, spa]
 ---
 
-**SPA(Single Page Application)**  
+**SPA(Single Page Application)**
+
 전통적인 웹사이트는 페이지 전체를 로딩하고, SPA는 Menu와 Footer와 같이 페이지 전환 전후에 중복되는 부분은 새로 불러오지 않는다.  
 SPA는 서버로부터 완전히 새로운 페이지를 불러오는 것이 아니라, 화면을 업데이트하기 위해 필요한 데이터만 서버에서 전달받아 브라우저에서 해당하는 부분만 업데이트하는 방식으로 작동하는 웹 애플리케이션이나 웹 사이트를 말한다.
 
 **Wireframe과 Mockup**  
 
 <center>
-<img src="../../images/2022-07-15-react_second/image-20220715195806939.png" alt="image-20220715195806939" style="zoom:50%;" />
+<img src="../../images/2022-07-15-react_second/image-20220715195806939.png" alt="image-20220715195806939" style="zoom:50%;" /><br>
+컴포넌트들끼리 보다 유기적으로 주고받을 수 있도록 설계해야 함
 </center>  
 
-컴포넌트들끼리 보다 유기적으로 주고받을 수 있도록 설계해야 함
+
 
 **React Router**
 
@@ -34,9 +36,10 @@ React SPA에서는 라우팅을 위해 React Router라는 라이브러리를 가
 
 <center>
 <img src="../../images/2022-07-15-react_second/image-20220715200817857.png" alt="image-20220715200817857" style="zoom:50%;" />
-</center>
+</center><br>
 
+React Router 사용 예시<br>
 <center>
-<img src="../../images/2022-07-15-react_second/image-20220715200939949.png" alt="image-20220715200939949" style="zoom: 50%;" />  
+<img src="../../images/2022-07-15-react_second/image-20220715200939949.png" alt="image-20220715200939949" style="zoom: 50%;" /><br>
 React Router 사용 환경 세팅
 </center>
