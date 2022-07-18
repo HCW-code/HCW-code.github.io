@@ -8,7 +8,7 @@ tag: [react, javascript]
 
 ### **Props**
 
-**porps의 특징  **
+**props의 특징**
 
 - props는 성별이나 이름처럼 변하지 않는 외부로부터 전달받은 값으로 웹 어플리케이션에서 해당 컴포넌트가 가진 속성에 해당한다.
 - 부모 컴포넌트로부터 전달받은 값이다.
@@ -17,7 +17,7 @@ tag: [react, javascript]
 
 
 
-**porps 사용법  **
+**props 사용법**
 
 1. 하위 컴포넌트에 전달하고자 하는 값(data)과 속성을 정의한다.
 2. props를 이용하여 정의된 값과 속성을 전달한다.
@@ -89,7 +89,7 @@ const [state 저장 변수, state 갱신 함수] = useState(상태 초기 값);
 **주의점**  
 React state는 상태 변경 함수 호출로 변경해야한다. 강제로 변경을 시도할 경우 리렌더링이 되지 않는다거나 state가 제대로 반영되지 않는다.
 
-### 이벤트 처리 Hands-on
+**이벤트 처리 Hands-on**
 
 React의 이벤트 처리 방식은 DOM의 이벤트 처리 방식과 유사하지만 문법차이가 있다.  
 ```html
@@ -100,7 +100,8 @@ React의 이벤트 처리 방식은 DOM의 이벤트 처리 방식과 유사하�
 <button onClick={handleEvent}>Event</button> #React
 ```
 
-**onChange**  
+**onChange**
+
 Input, textarea, select와 같은 폼(Form) 엘리먼트는 사용자의 입력값을 제어하는데 사용된다. React에서는 이러한 변경될 수 있는 입력값을 일반적으로 컴포넌트의 state로 관리하고 업데이트한다. onChange 이벤트가 발생하면 e.target.value를 통해 이벤트 객체에 담겨있는 input값을 읽어올 수 있다.
 
 ```react
@@ -151,7 +152,7 @@ onClick이벤트에 alert함수를 바로 호출하면 컴포넌트가 렌더링
 
 <center>
 
-<img src="../images/2022-07-18-react_third/image-20220718180307393.png" alt="image-20220718180307393" style="zoom:50%;" />
+<img src="../../images/2022-07-18-react_third/image-20220718180307393.png" alt="image-20220718180307393" style="zoom:50%;" />
 
 </center>  
 컴포넌트는 컴포넌트 바깥에서 props를 이용해 데이터를 마치 인자 혹은 속성처럼 전달 받을 수 있다. 즉 데이터를 전달하는 주체는 부모 컴포넌트가 되며 이는 데이터 흐름이 하향식(top-down) 임을 의미한다.  
