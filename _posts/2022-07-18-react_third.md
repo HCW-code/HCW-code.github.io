@@ -2,7 +2,7 @@
 layout: single
 title: "[React] Props, State"
 categories: React
-tag: [react, javascript]
+tag: [react, props, state]
 
 ---
 
@@ -13,9 +13,7 @@ tag: [react, javascript]
 - props는 성별이나 이름처럼 변하지 않는 외부로부터 전달받은 값으로 웹 어플리케이션에서 해당 컴포넌트가 가진 속성에 해당한다.
 - 부모 컴포넌트로부터 전달받은 값이다.
 - props로 어떤 타입의 값도 넣어 전달할 수 있도록 props는 객체의 형태를 가진다.
-- porps는 외부로부터 전달받아 변하지 않는 값이므로 함부로 변경될 수 없는 읽기 전용 객체이다.
-
-
+- props는 외부로부터 전달받아 변하지 않는 값이므로 함부로 변경될 수 없는 읽기 전용 객체이다.
 
 **props 사용법**
 
