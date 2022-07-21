@@ -107,7 +107,7 @@ author:
   name             : "홍찬우"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "깃허브 블로그"
-  location         : "Somewhere"
+  location         : "Seoul"
   email            : "jingi6052@naver.com"
   links:
     - label: "Email"
@@ -287,6 +287,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: #true
+      show_date: true
       comments: # true
       share: true
       related: true
