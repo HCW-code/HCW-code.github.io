@@ -16,7 +16,7 @@ tag: [자료구조, data structure, stack, queue]
 
 <img src="../../images/2022-07-22-datastructure_first/image-20220721224557980.png" alt="image-20220721224557980" style="zoom: 44%;" />
 
-</center>
+</center><br>
 
 가장 많이 쓰이고 알고리즘 테스트에 자주 등장하는 네가지
 
