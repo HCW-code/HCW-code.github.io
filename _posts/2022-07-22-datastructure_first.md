@@ -14,7 +14,7 @@ tag: [자료구조, data structure, stack, queue]
 
 <center>
 
-<img src="../images/2022-07-22-datastructure_first/image-20220721224557980.png" alt="image-20220721224557980" style="zoom: 44%;" />
+<img src="../../images/2022-07-22-datastructure_first/image-20220721224557980.png" alt="image-20220721224557980" style="zoom: 44%;" />
 
 </center>
 
