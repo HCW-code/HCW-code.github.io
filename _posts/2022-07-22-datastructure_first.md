@@ -85,7 +85,7 @@ graph의 표현 방식
 
 <img src="../../images/2022-07-22-datastructure_first/image-20220725191436067.png" alt="image-20220725191436067" width = "250" height="200" />
 
-<img src="../../images/2022-07-22-datastructure_first/image-20220725191507558.png" alt="image-20220725191507558" width = "350" height="200" />
+<img src="../../images/2022-07-22-datastructure_first/image-20220725191507558.png" alt="image-20220725191507558" width = "330" height="200" />
 
 </center>
 
@@ -107,7 +107,7 @@ graph의 표현 방식
 
 <center>
 
-<img src="../images/2022-07-22-datastructure_first/image-20220725192930052.png" alt="image-20220725192930052" style="zoom: 33%;" />
+<img src="../../images/2022-07-22-datastructure_first/image-20220725192930052.png" alt="image-20220725192930052" style="zoom: 33%;" />
 
 </center>
 
