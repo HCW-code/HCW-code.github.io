@@ -83,9 +83,14 @@ graph의 표현 방식
 
 <center>
 
-<img src="../../images/2022-07-22-datastructure_first/image-20220725191436067.png" alt="image-20220725191436067" width = "250" height="200" />
+<img src="../../images/2022-07-22-datastructure_first/image-20220725191436067.png" alt="image-20220725191436067" width = "350" height="200" />
 
 <img src="../../images/2022-07-22-datastructure_first/image-20220725191507558.png" alt="image-20220725191507558" width = "350" height="200" />
 
 </center>
 
+깊이(depth)  
+트리 구조에서는 루트로부터 하위 계층의 특정 노드까지의 깊이(depth)를 표현할 수 있다.
+
+레벨(Level)  
+트리 구조에서 같은 깊이를 가지고 있는 노드를 묶어서 레벨(level)로 표현 할 수 있다. 같은 레벨에 나란히 있는 노드를 형제 노드(Sibling Node)라고 한다.
