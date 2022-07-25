@@ -85,7 +85,7 @@ graph의 표현 방식
 
 <img src="../../images/2022-07-22-datastructure_first/image-20220725191436067.png" alt="image-20220725191436067" width = "250" height="200" />
 
-<img src="../../images/2022-07-22-datastructure_first/image-20220725191507558.png" alt="image-20220725191507558" width = "250" height="200" />
+<img src="../../images/2022-07-22-datastructure_first/image-20220725191507558.png" alt="image-20220725191507558" width = "300" height="200" />
 
 </center>
 
@@ -98,4 +98,9 @@ graph의 표현 방식
 높이Height)  
 트리 구조에서 리프 노드를 기준으로 루트 높이까지의 높이를 표현할 수 있다. 리프 노드의 height는 0
 
-서브 트리(Sub tree)
+서브 트리(Sub tree)  
+트리 구조의 root에서 뻗어 나오는 큰 트리의 내부에, 트리 구조를 갖춘 작은 트리를 서브 트리라고 부른다.
+
+**Binary Search Tree**
+
+이진트리는 자식 노드가 최대 두 개인 노드들로 구성된 트리이다. 이 두 개의 자식 노드는 왼쪽 자식 노드, 오른쪽 자식 노드로 나눌 수 있으며 이진 트리는 자료의 삽입, 삭제 방법에 따라 정 이진 트리(Full binary tree), 완전 이진 트리(Complete binary tree), 포화 이진 트리(Perfect binary tree)로 나뉜다.
