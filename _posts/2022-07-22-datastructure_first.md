@@ -85,7 +85,7 @@ graph의 표현 방식
 
 <img src="../../images/2022-07-22-datastructure_first/image-20220725191436067.png" alt="image-20220725191436067" width = "250" height="200" />
 
-<img src="../../images/2022-07-22-datastructure_first/image-20220725191507558.png" alt="image-20220725191507558" width = "300" height="200" />
+<img src="../../images/2022-07-22-datastructure_first/image-20220725191507558.png" alt="image-20220725191507558" width = "350" height="200" />
 
 </center>
 
@@ -104,3 +104,16 @@ graph의 표현 방식
 **Binary Search Tree**
 
 이진트리는 자식 노드가 최대 두 개인 노드들로 구성된 트리이다. 이 두 개의 자식 노드는 왼쪽 자식 노드, 오른쪽 자식 노드로 나눌 수 있으며 이진 트리는 자료의 삽입, 삭제 방법에 따라 정 이진 트리(Full binary tree), 완전 이진 트리(Complete binary tree), 포화 이진 트리(Perfect binary tree)로 나뉜다.
+
+<center>
+
+<img src="../images/2022-07-22-datastructure_first/image-20220725192930052.png" alt="image-20220725192930052" style="zoom: 33%;" />
+
+</center>
+
+| 이진 트리 종류 | 영어 표기            | 설명                                                         |
+| -------------- | -------------------- | ------------------------------------------------------------ |
+| 정 이진 트리   | Full binary tree     | 각 노드가 0개 혹은 2개의 자식 노드를 갖는다.                 |
+| 포화 이진 트리 | Perfect binary tree  | 정 이진 트리이면서 완전 이진 트리인 경우이다. 모든 리프 노드의 레벨이 동일하고, 모든 레벨이 가득 채워져 있는 트리이다. |
+| 완전 이진 트리 | Complete binary tree | 마지막 레벨을 제외한 몯ㄴ 노드가 가득 차 있어야하고 마지막 레벨의 노드는 전부 차 있지 않아도 되지만 왼쪽이 채워져야 한다. |
+
