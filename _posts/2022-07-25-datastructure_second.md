@@ -7,7 +7,6 @@ tag: [자료구조, data structure, tree, graph]
 
 ---
 
-### Graph, Tree Search Algorithm
 
 **Tree traversal**
 
