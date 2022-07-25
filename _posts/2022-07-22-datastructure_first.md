@@ -2,7 +2,7 @@
 layout: single
 title: "[자료구조] 자료구조 기초"
 categories: 자료구조
-tag: [자료구조, data structure, stack, queue]
+tag: [자료구조, data structure, stack, queue, tree, graph]
 
 ---
 
