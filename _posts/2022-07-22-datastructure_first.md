@@ -73,7 +73,7 @@ graph의 표현 방식
 
   <center>  
 
-  <img src="../images/2022-07-22-datastructure_first/image-20220725190940540.png" alt="image-20220725190940540" style="zoom: 33%;" />
+  <img src="../../images/2022-07-22-datastructure_first/image-20220725190940540.png" alt="image-20220725190940540" style="zoom: 33%;" />
 
 </center>
 
