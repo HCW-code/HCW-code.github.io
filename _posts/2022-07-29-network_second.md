@@ -16,7 +16,7 @@ tag: [http, network]
 
 <center>
 
-<img src="../images/2022-07-29-network_second/image-20220729002411964.png" alt="image-20220729002411964" style="zoom: 33%;" />
+<img src="../../images/2022-07-29-network_second/image-20220729002411964.png" alt="image-20220729002411964" style="zoom: 33%;" />
 
 </center><br>
 
@@ -31,7 +31,7 @@ CSR은 클라이언트에서 페이지를 렌더링한다.
 
 <center>
 
-<img src="../images/2022-07-29-network_second/image-20220729002845500.png" alt="image-20220729002845500" style="zoom:33%;" />
+<img src="../../images/2022-07-29-network_second/image-20220729002845500.png" alt="image-20220729002845500" style="zoom:33%;" />
 
 </center>
 
