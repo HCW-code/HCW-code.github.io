@@ -6,7 +6,7 @@ tag: [http, network]
 
 ---
 
-**클라이언트-서버 통신과 API**
+#### **클라이언트-서버 통신과 API**
 
 클라이언트와 서버 간의 통신은 요청과 응답으로 구성되며 요청이 있어야만 응답이 온다.
 
@@ -18,7 +18,7 @@ HTTP : 웹 어플리케이션 아키텍처에서 클라이언트와 서버가 �
 
 <center>
 
-<img src="../images/2022-07-28-network_first/image-20220728222631344.png" alt="image-20220728222631344" style="zoom: 33%;" /></center>
+<img src="../../images/2022-07-28-network_first/image-20220728222631344.png" alt="image-20220728222631344" style="zoom: 33%;" /></center><br>
 
 
 
@@ -34,7 +34,7 @@ HTTP메소드
 - PUT or PATCH - 갱신(Update)
 - DELETE - 삭제(Delete)
 
-**URL과 URI**
+#### **URL과 URI**
 
 URL(Uniform Resource Locator)
 
@@ -49,9 +49,9 @@ URI(Uniform Resource Identifier)
 
 <img src="../../images/2022-07-28-network_first/image-20220728223943373.png" alt="image-20220728223943373" style="zoom:50%;" />
 
-</center>
+</center><br>
 
-**IP와 Port**
+#### **IP와 Port**
 
 **IP**는 Internet Protocol의 줄임말로, 인터넷 상에서 사용하는 주소체계이다.  
 인터넷에 연결된 모든 PC는 IP주소체계를 따라 네덩이의 숫자로 구분되며 이렇게 네덩이의 숫자로 구분된 IP주소체계를 IPv4라고 한다.  
@@ -68,14 +68,14 @@ IPv6는 IPv4로 할당할 수 있는 PC가 한계를 넘어서게 되면서 생�
 
 <img src="../../images/2022-07-28-network_first/image-20220728224625380.png" alt="image-20220728224625380" style="zoom:33%;" />
 
-</center>
+</center><br>
 
 
 
 **port**는 IP주소가 가리키는 PC에 접속할 수 있는 통로이다.  
 0~1024번까지의 포트 번호는 주요 통신을 위한 규약에 따라 이미 정해져 있으며 그중에 서 잘 알려진 포트 번호는 22번 SSH, 80번 HTTP, 443번 HTTPS가 있다.
 
-**도메인과 DNS**
+#### **도메인과 DNS**
 
 Domain name : 웹 브라우저를 통해 특정 사이트에 진입을 할 때, IP 주소를 대신하여 사용하는 주소
 
@@ -83,7 +83,7 @@ DNS(Domain Name System) : 호스트의 도메인 이름을 IP주소로 변환하
 
 
 
-**HTTP**
+#### **HTTP**
 
 HTTP(HyperText Transfer Protocol) : HTML과 같은 문서를 전송하기 위한 Application Layer 프로토콜이다. HTTP는 웹 브라우저와 웹 서버의 소통을 위해 디자인되었다. 
 
@@ -105,9 +105,9 @@ HTTP messages는 클라이언트와 서버 사이에서 데이터가 교환되�
 
 이 중 start line과 HTTP headers를 묶어 요청이나 응답의 헤드(head)라고 하고, payload는 body라고 한다.
 
-**요청(Requests)**
+###### **요청(Requests)**
 
-Start line
+**Start line**
 
 HTTP 요청은 클라이언트가 서버에 보내는 메시지로 세가지 요소가 있다.
 
@@ -120,7 +120,7 @@ HTTP 요청은 클라이언트가 서버에 보내는 메시지로 세가지 요
 
 3. HTTP 버전은 메시지의 다른 구조를 결정한다. 이를 위해 HTTP 버전을 함께 입력한다.
 
-Headers
+**Headers**
 
 요청의 Headers는 기본 구조를 따른다. 대소문자 구분 없는 문자열과 콜론( : ), 값을 입력한다. 값은 헤더에 따라 다르며 여러 종류의 헤더가 있고 다음과 같이 그룹을 나눌 수 있다.
 
@@ -129,17 +129,17 @@ Headers
 - Entity headers : Content-Length와 같은 헤더는 body에 적용되며 body가 비어 있는 경우 entity headers는 전송되지 않는다.
 <center>
 <img src="../../images/2022-07-28-network_first/image-20220728233055880.png" alt="image-20220728233055880" style="zoom:40%;" />
-</center>
-Body
+</center><br>
+**Body**
 
 요청의 본문은 HTTP messages 구조의 마지막에 위치한다. 모든 요청에 body가 필요하지는 않으며 GET, HEAD, DELETE, OPTIONS처럼 서버에 리소스를 요청하는 경우에는 본문이 필요하지 않다. POST나 PUT과 같은 일부 요청은 데이터를 업데이트하기 위해 사용한다. body는 다음과 같이 두 종류로 나눌 수 있다.
 
 - Single-resource bodies(단일 - 리소스 본문) : 헤더 두 개(Content-Type과 Content-Length)로 정의된 단일 파일로 구성된다.
 - Multiple-resource bodies(다중 - 리소스 본문) : 여러 파트로 구성된 본문에서는 각 파트마다 다른 정보를 지닌다.
 
-**응답(Responses)**
+###### **응답(Responses)**
 
-Status line
+**Status line**
 
 응답의 첫줄은 Status line이라고 부르며 다음의 정보를 포함한다.
 
@@ -147,7 +147,7 @@ Status line
 2. 상태 코드 - 요청의 결과를 나타낸다.(200, 302, 404 등)
 3. 상태 텍스트 - 상태 코드에 대한 설명
 
-Headers
+**Headers**
 
 응답에 들어가는 HTTP headers는 요청 헤더와 동일한 구조를 가지고 있다. 대소문자 구분 없는 문자열과 콜론( : ), 값을 입력한다. 값은 헤더에 따라 다르며 요청의 헤더와 마찬가지로 몇 그룹으로 나눌 수 있다.
 
@@ -156,8 +156,8 @@ Headers
 - Entity headers : Content-Length와 같은 헤더는 body에 적용되며 body가 비어있는 경우 entity headers는 전송되지 않는다.
 <center>
 <img src="../../images/2022-07-28-network_first/image-20220728234119805.png" alt="image-20220728234119805" style="zoom:35%;" />
-</center>
-Body
+</center><br>
+**Body**
 
 응답의 본문은 HTTP messages구조의 마지막에 위치한다. 모든 응답에 body가 필요하지는 않으며 201, 204와 같은 상태 코드를 가지는 응답에는 필요하지 않다. 응답의 body는 다음과 같이 두 종류로 나눌 수 있다.
 
