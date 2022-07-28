@@ -47,7 +47,7 @@ URI(Uniform Resource Identifier)
 
 <center>
 
-<img src="../images/2022-07-28-network_first/image-20220728223943373.png" alt="image-20220728223943373" style="zoom:50%;" />
+<img src="../../images/2022-07-28-network_first/image-20220728223943373.png" alt="image-20220728223943373" style="zoom:50%;" />
 
 </center>
 
@@ -66,7 +66,7 @@ IPv6는 IPv4로 할당할 수 있는 PC가 한계를 넘어서게 되면서 생�
 
 <center>
 
-<img src="../images/2022-07-28-network_first/image-20220728224625380.png" alt="image-20220728224625380" style="zoom:33%;" />
+<img src="../../images/2022-07-28-network_first/image-20220728224625380.png" alt="image-20220728224625380" style="zoom:33%;" />
 
 </center>
 
@@ -94,7 +94,7 @@ HTTP messages는 클라이언트와 서버 사이에서 데이터가 교환되�
 
 <center>
 
-<img src="../images/2022-07-28-network_first/image-20220728231139145.png" alt="image-20220728231139145" style="zoom:50%;" />
+<img src="../../images/2022-07-28-network_first/image-20220728231139145.png" alt="image-20220728231139145" style="zoom:50%;" />
 
 </center>
 
@@ -127,9 +127,9 @@ Headers
 - General header : 메시지 전체에 적용된다.
 - Request headers : User-Agent, Accept-Type, Accept-Language과 같은 헤더는 요청을 보다 구체화 한다. Referer처럼 컨텍스트를 제공하거나 If-Nonde과 같이 조건에 따라 제약을 추가할 수 있다.
 - Entity headers : Content-Length와 같은 헤더는 body에 적용되며 body가 비어 있는 경우 entity headers는 전송되지 않는다.
-
-<img src="../images/2022-07-28-network_first/image-20220728233055880.png" alt="image-20220728233055880" style="zoom:40%;" />
-
+<center>
+<img src="../../images/2022-07-28-network_first/image-20220728233055880.png" alt="image-20220728233055880" style="zoom:40%;" />
+</center>
 Body
 
 요청의 본문은 HTTP messages 구조의 마지막에 위치한다. 모든 요청에 body가 필요하지는 않으며 GET, HEAD, DELETE, OPTIONS처럼 서버에 리소스를 요청하는 경우에는 본문이 필요하지 않다. POST나 PUT과 같은 일부 요청은 데이터를 업데이트하기 위해 사용한다. body는 다음과 같이 두 종류로 나눌 수 있다.
@@ -154,9 +154,9 @@ Headers
 - General headers : 메시지 전체에 적용된다.
 - Response headers : Vary, Accept-Ranges와 같이 상태 줄에 넣기에는 공간이 부족했던 추가 정보를 제공한다.
 - Entity headers : Content-Length와 같은 헤더는 body에 적용되며 body가 비어있는 경우 entity headers는 전송되지 않는다.
-
-<img src="../images/2022-07-28-network_first/image-20220728234119805.png" alt="image-20220728234119805" style="zoom:35%;" />
-
+<center>
+<img src="../../images/2022-07-28-network_first/image-20220728234119805.png" alt="image-20220728234119805" style="zoom:35%;" />
+</center>
 Body
 
 응답의 본문은 HTTP messages구조의 마지막에 위치한다. 모든 응답에 body가 필요하지는 않으며 201, 204와 같은 상태 코드를 가지는 응답에는 필요하지 않다. 응답의 body는 다음과 같이 두 종류로 나눌 수 있다.
