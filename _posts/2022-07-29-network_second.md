@@ -5,7 +5,7 @@ categories: Network
 tag: [http, network]
 ---
 
-**SSR(Server Side Rendering)**
+#### **SSR(Server Side Rendering)**
 
 웹 페이지를 브라우저에서 렌더링하는 대신에 서버에서 렌더링힌다.  
 브라우저가 서버의 URI로 GET요청을 보내면 서버는 정해진 웹 페이지 파일을 브라우저로 전송한다.  
@@ -20,7 +20,7 @@ tag: [http, network]
 
 </center><br>
 
-**CSR(Client Side Rendering)**
+#### **CSR(Client Side Rendering)**
 
 CSR은 클라이언트에서 페이지를 렌더링한다.  
 브라우저의 요청을 서버로 보내면 서버는 웹 페이지를 렌더링 하는 대신, 웹 페이지의 골격이 될 단일 페이지를 클라이언트에 보낸다.  
