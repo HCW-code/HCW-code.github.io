@@ -8,14 +8,14 @@ tag: [react, props, state]
 
 ### **Props**
 
-**props의 특징**
+#### **props의 특징**
 
 - props는 성별이나 이름처럼 변하지 않는 외부로부터 전달받은 값으로 웹 어플리케이션에서 해당 컴포넌트가 가진 속성에 해당한다.
 - 부모 컴포넌트로부터 전달받은 값이다.
 - props로 어떤 타입의 값도 넣어 전달할 수 있도록 props는 객체의 형태를 가진다.
 - props는 외부로부터 전달받아 변하지 않는 값이므로 함부로 변경될 수 없는 읽기 전용 객체이다.
 
-**props 사용법**
+#### **props 사용법**
 
 1. 하위 컴포넌트에 전달하고자 하는 값(data)과 속성을 정의한다.
 2. props를 이용하여 정의된 값과 속성을 전달한다.
@@ -67,7 +67,8 @@ return (
 
 state는 Toggle Switch나 Counter처럼 컴포넌트 내부에서 변할 수 있는 값이다. 
 
-**useState 사용법**   
+#### **useState 사용법**
+
 -useState를 이용하기 위해서는 React로부터 useState를 불러와야 한다. import 키워드로 useState를 불러와야한다.
 
 ```react
@@ -84,10 +85,11 @@ const [isChecked, setIsChecked] = useState(false);
 const [state 저장 변수, state 갱신 함수] = useState(상태 초기 값);
 ```
 
-**주의점**  
+#### **주의점**
+
 React state는 상태 변경 함수 호출로 변경해야한다. 강제로 변경을 시도할 경우 리렌더링이 되지 않는다거나 state가 제대로 반영되지 않는다.
 
-**이벤트 처리 Hands-on**
+##### **이벤트 처리 Hands-on**
 
 React의 이벤트 처리 방식은 DOM의 이벤트 처리 방식과 유사하지만 문법차이가 있다.  
 ```html
@@ -98,7 +100,7 @@ React의 이벤트 처리 방식은 DOM의 이벤트 처리 방식과 유사하�
 <button onClick={handleEvent}>Event</button> #React
 ```
 
-**onChange**
+#### **onChange**
 
 Input, textarea, select와 같은 폼(Form) 엘리먼트는 사용자의 입력값을 제어하는데 사용된다. React에서는 이러한 변경될 수 있는 입력값을 일반적으로 컴포넌트의 state로 관리하고 업데이트한다. onChange 이벤트가 발생하면 e.target.value를 통해 이벤트 객체에 담겨있는 input값을 읽어올 수 있다.
 
@@ -118,7 +120,7 @@ return (
 };
 ```
 
-**onClick**
+#### **onClick**
 
 onClick 이벤트는 말 그대로 사용자가 클릭이라는 행동을 하였을 때 발생하는 이벤트이다. 버튼이나 a태그를 통한 링크 이동 등과 같이 주로 사용자의 행동에 따라 애플리케이션이 반응해야 할 때 자주 사용하는 이벤트이다.
 
