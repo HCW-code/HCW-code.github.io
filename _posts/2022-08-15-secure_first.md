@@ -90,7 +90,7 @@ https
 	).listen(3001)
 ```
 
-## Hashing
+### Hashing
 
 Authentication(Plaintext)
 
@@ -108,7 +108,7 @@ Authentication(Plaintext) - 암호화
 
 </center>
 
-### Hashing
+#### Hashing
 
 어떠한 문자열에 '임의의 연산'을 적용하여 다른 문자열로 변환하는 것
 
@@ -130,7 +130,7 @@ Authentication(Hashing)
 
 </center>
 
-### Salt
+#### Salt
 
 암호화해야 하는 값에 어떤 '별도의 값'을 추가하여 결과를 변형하는 것
 
