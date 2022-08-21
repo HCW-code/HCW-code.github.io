@@ -274,3 +274,9 @@ FAQ
      ```
 
      - localhost:901에서 확인
+
+### Node.js 웹 앱의 도커라이징(컨테이너화)
+
+도커라이징(Dockerizing)은 애플리케이션을 도커 컨테이너에서 돌릴 수 있도록 이미지로 만드는 과정을 의미한다. 도커라이징이라는 말보다는 컨테이너화라는 말이 훨씬 많이 쓰인다.
+
+[Node.js 웹 앱의 도커라이징(node.js 공식 문서)](https://nodejs.org/ko/docs/guides/nodejs-docker-webapp/)
