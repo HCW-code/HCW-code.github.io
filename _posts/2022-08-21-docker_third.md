@@ -40,7 +40,7 @@ docker-compose up {특정 이미지}
 
 #### client와 server를 동시에 구동
 
-- Docker-compose.yaml
+- dsocker-compose.yaml
   - yaml, yml 같은 확장자
   - 하나의 docker-compose에서 관리되는 컨테이너끼리는 동일한 docker network에서 구동된다.
     - docker run 명령과 다르게 docker-compose 파일 안에서 기본 network가 사용된다.
