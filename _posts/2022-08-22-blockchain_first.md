@@ -2,7 +2,7 @@
 layout: single
 title: "[블록체인] Introduction"
 categories: blockchain
-tag: [blockchain]
+tag: [blockchain, 암호화폐, 화폐]
 toc: true
 
 ---
