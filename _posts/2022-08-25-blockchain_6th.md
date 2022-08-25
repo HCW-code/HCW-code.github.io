@@ -38,7 +38,8 @@ toc: true
    - 단점 : 병목현상, 비용증가
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114203433.png" alt="image-20220825114203433" style="zoom:33%;" />
-
+   </center>
+   <center>
    [Active-Active는 클러스터를 항상 가동하여 가용할 수 있는 상태로 두는 구성 방식]
    </center>
 
