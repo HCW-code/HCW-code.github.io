@@ -38,11 +38,13 @@ toc: true
    - 단점 : 병목현상, 비용증가
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114203433.png" alt="image-20220825114203433" style="zoom:33%;" />
+
    [Active-Active는 클러스터를 항상 가동하여 가용할 수 있는 상태로 두는 구성 방식]
    </center>
 
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114359427.png" alt="image-20220825114359427" style="zoom:33%;" />
+
    [Active-Standby는 일부 클러스터는 가동하고, 일부 클러스터는 대기 상태로 구성하는 방식]
    </center>
 2. 레플리카
@@ -53,11 +55,13 @@ toc: true
    - 단점 : 각 노드 간의 데이터 동기화 보장이 어렵다. Master 노드가 다운시 대처 어려움
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114710795.png" alt="image-20220825114710795" style="zoom:33%;" />
+
    [단순 백업 방식]
    </center>
 
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114749742.png" alt="image-20220825114749742" style="zoom:33%;" />
+
    [부하 분산 방식]
    </center>
 3. 샤딩
@@ -102,6 +106,7 @@ toc: true
 <center>
 <img src="../../images/2022-08-25-blockchain_6th/image-20220825122545418.png" alt="image-20220825122545418" style="zoom: 33%;" />
 </center>
+
 분산 데이터베이스도 데이터를 분산시켜 저장한다는 점에서는 동일하지만 특별히 악의적인 사용자를 전제하지 않는다.  
 이는 해당 개념이 나온 배경이 일반적으로 **재해 복구, 백업, 성능상의 이점**만을 고려하였기 때문이다.
 
