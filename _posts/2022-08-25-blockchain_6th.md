@@ -42,10 +42,11 @@ toc: true
    <center>
    [Active-Active는 클러스터를 항상 가동하여 가용할 수 있는 상태로 두는 구성 방식]
    </center>
-
+   <br>
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114359427.png" alt="image-20220825114359427" style="zoom:33%;" />
-
+   </center>
+   <center>
    [Active-Standby는 일부 클러스터는 가동하고, 일부 클러스터는 대기 상태로 구성하는 방식]
    </center>
 2. 레플리카
@@ -56,13 +57,15 @@ toc: true
    - 단점 : 각 노드 간의 데이터 동기화 보장이 어렵다. Master 노드가 다운시 대처 어려움
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114710795.png" alt="image-20220825114710795" style="zoom:33%;" />
-
+   </center>
+   <center>
    [단순 백업 방식]
    </center>
-
+   <br>
    <center>
    <img src="../../images/2022-08-25-blockchain_6th/image-20220825114749742.png" alt="image-20220825114749742" style="zoom:33%;" />
-
+   </center>
+   <center>
    [부하 분산 방식]
    </center>
 3. 샤딩
