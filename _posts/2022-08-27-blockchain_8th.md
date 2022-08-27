@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[블록체인] 암호화폐, 코인과 토큰"
+title: "[블록체인] 암호화폐"
 categories: blockchain
-tag: [blockchain, 암호화폐, 코인, 토큰]
+tag: [blockchain, 암호화폐]
 toc: true
 
 
