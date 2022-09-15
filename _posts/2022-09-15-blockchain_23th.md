@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[블록체인] Geth rlch"
+title: "[블록체인] Geth 기초"
 categories: blockchain
 tag: [docker, geth, 계정 생성, 채굴, 트랜잭션 생성]
 toc: true
