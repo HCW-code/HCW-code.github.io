@@ -363,3 +363,179 @@ gas와 gasPrice를 확인하면 되는데 gasPrice는 1gas의 가격이며, 단�
 지불한 수수료(wei) / gasPrice = 2,100,000,000,000 / 18,000,000,000 = 21000 gas
 ```
 
+## 로컬에서 두 개의 노드 연결
+
+실제 이더리움은 여러 개의 노드가 서로 연결되어 있으므로, 두 개의 노드를 서로 연결하여 동기화가 일어나도록 구성한다.
+
+먼저 도커 CLI를 이용해 도커의 접속을 수정한다. 기존의 attach를 사용하면 서로 다른 여러 터미널로 도커에 접속하더라도 하나의 도커 터미널에 연결이 된다. 그래서 서로 다른 터미널로 도커에 접속했을때 각 터미널이 서로 다른 화면을 만날 수 있도록 해야한다.
+
+```shell
+# 실행중인 container list 확인
+docker ps -a
+# container 실행; 여기서는 'con_ubuntu'
+docker start con_ubuntu
+# container 이름에 따라 일부 수정하여 다음 명령어로 도커에 접속 실행
+docker exec -it con_ubuntu bash
+```
+
+명령어 exec을 통해 하나의 도커에서 다양한 터미널 활동을 할 수 있다.
+<center>
+<img src="../../images/2022-09-15-blockchain_23th/image-20220918231037821.png" alt="image-20220918231037821" style="zoom:50%;" />
+</center>
+두 개의 Geth 노드를 생성하고 연결한다. 이를 위해 두 개의 터미널 모두 docker CLI에 접속하여야 한다.
+
+두개의 폴더를 go-ethereum 폴더 안에 생성한다.
+
+Go-ethereum 폴더는 홈폴더 아래에 있다. 따라서 geth 명령어가 실행되는 기본 경로는 ~/go-ethereum/ 이다.
+
+```shell
+mkdir test_node1 test_node2
+```
+
+Get 노드를 생성하기 위해 각 폴더 안에 genesis.json 파일을 생성한다.
+
+```json
+{
+  "config": {
+    "chainId": 1007,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0
+  },
+  "difficulty": "0x20000",
+  "gasLimit": "0x2fefd8",
+  "alloc": {},
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "extraData": "",
+  "nonce": "0x0000000000000000",
+  "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "timestamp": "0x00"
+}
+```
+
+이번에는 alloc에 초기 지갑 주소가 없다.
+<center>
+<img src="../../images/2022-09-15-blockchain_23th/image-20220918232438728.png" alt="image-20220918232438728" style="zoom:33%;" />
+</center>
+### 1. Node 생성
+
+genesis.json 파일로 genesis block을 생성한다.
+
+```
+geth --datadir test_node1 init test_node1/genesis.json
+geth --datadir test_node2 init test_node2/genesis.json
+```
+
+### 2. 두 개의 노드 연결
+
+1. 터미널 1에서 첫번째 노드에 연결한다.
+
+```
+geth --networkid 1007 --datadir test_node1 --nodiscover --port 30303 --allow-insecure-unlock --authrpc.port "8547" --http --http.port "8548" --http.addr "0.0.0.0" --http.corsdomain "*" --http.api "eth, net, web3, miner, debug, personal, rpc" console
+```
+
+터미널 2에서 두번째 노드에 연결한다.
+
+```
+geth --networkid 1007 --datadir test_node2 --nodiscover --port 30304 --allow-insecure-unlock --authrpc.port "8549" --http --http.port "8550" --http.addr "0.0.0.0" --http.corsdomain "*" --http.api "eth, net, web3, miner, debug, personal, rpc" console
+```
+
+서로 다른 노드에 접속했는지 확인하려면, 채굴을 진행하거나 각 노드에서 생성한 지갑 주소가 공유되고 있는지 확인하면 된다.
+
+2. 터미널 1에서 다음 명령어를 입력한다.
+
+   ```shell
+   admin.nodeInfo.enode
+   ```
+
+   enode:// 로 시작하는 문자열이 출력되면 복사한다.
+
+3. 터미널 2로 이동하여, 다음 명령어를 실행한다.
+
+   ```
+   admin.addPeer("첫 번째 노드의 enode 주소")
+   ```
+
+   명령어 admin.peers로 노드와 연결된 피어의 정보를 확인할 수 있다.
+   <center>
+   <img src="../../images/2022-09-15-blockchain_23th/image-20220919002904258.png" alt="image-20220919002904258" style="zoom: 33%;" />
+   </center>
+   
+
+### 3. 채굴(마이닝)
+
+1. 첫번째 노드에서 새로운 계정 생성
+
+2. 계정을 생성한 후 miner.start()로 채굴 시작
+
+3. miner.stop()으로 채굴 종료
+
+4. 두 노드에서 eth.blockNumber를 입력해 블록의 숫자를 확인한다.
+
+   두 노드의 블록 숫자가 동기화 된 것을 확인
+
+### 4. 트랜잭션 생성
+
+1. 첫번째 노드의 지갑의 잠금을 해제하고 트랜잭션을 두번째 노드의 지갑으로 보낸다.
+
+   ```
+   personal.unlockAccount(eth.coinbase)
+   #PassPharse 입력
+   #다음의 to에는 두번째 노드의 지갑 주소를 입력한다.
+   eth.sendTransaction({
+   	from: eth.coinbase, to: "0xb097f42d670da585b2939a9fa0d47b679cb6dfc4", value: web3.toWei(5, "ether")
+   })
+   ```
+
+2. eth.pendingTransactions로 대기중인 Tx를 확인
+
+3. 첫번째 노드에서 채굴을 시작하고 나서 중단한 후 두 번째 노드의 지갑 주소로 ETH가 들어온 것을 확인
+
+
+
+## Geth 명령어 모음
+
+**--networkid value**
+
+geth로 생성된 블록체인 네트워크의 ID를 지정해준다. 1~4는 미리 정해진 숫자이기 때문에 다른 숫자를 입력해준다. 1은 Frontier, 2는 Morden, 3은 Ropsten, 4는 Rinkeby 이며, 별도로 지정되지 않을 시 디폴트 값은 1이다.
+
+```
+geth --datadir data --networkid 15
+```
+
+**--http 관련 옵션**
+
+http-rpc 서버와 관련된 옵션이다. 해당 옵션을 사용하면 외부에서 geth에 접근할 수 있다. --http 옵션을 통해 geth에 접근할 때 어떤 포트로 접근하는지, 어떤 모듈을 사용하게 할 것인지 지정할 수 있다.
+
+```
+--http //Enable the HTTP-RPC server
+--http.addr value //HTTP-RPC server listening interface(default : "localhost")
+--http.port value //HTTP-RPC server listening port(default : 8545)
+--http.api value //API's offered over the HTTP-RPC interface
+--http.corsdomain value
+```
+
+**--ws 관련 옵션**
+
+geth에서는 websocket을 지원한다.
+
+```
+--ws	//Enable the HTTP-RPC server
+--ws.addr value	//HTTP-RPC server listening interface(default : "localhost")
+--ws.port value	//HTTP-RPC server listening port(default : 8545)
+--ws.api value	//API's offered over the HTTP-RPC interface
+--ws.origins value //Origins from which to accept websockets requests
+```
+
+**외부 계정 unlock**
+
+geth에서는 보안상의 이유로 rpc를 사용할 때 외부에서 계정을 unlock하는 것을 금지하고 있다. 따라서 외부에서 계정으로 unlock 하기 위해서는 다음의 옵션을 사용해야 한다.
+
+```
+--unlock value //Comma separated list of accounts to unlock
+--allow-insecure-unlock	//Allow insecure account unlocking when account-related RPCs are exposed by http
+--password value	Password file to use for non-interactive password input
+```
+
