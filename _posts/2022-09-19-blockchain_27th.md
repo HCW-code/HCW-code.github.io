@@ -123,3 +123,79 @@ contract Example {
 }
 ```
 
+### 조건문, 반복문
+
+#### 조건문
+
+js와 동일
+
+삼항 연산자
+
+```solidity
+function checkCondition(uint x) public pure returns(uint result){
+	//result = 조건식 ? 참일 경우 : 거짓일 경우;
+	result = x >= 1500 ? 1 : 0;
+	return result
+}
+```
+
+#### 반복문
+
+- while
+
+- do-while
+
+```solidity
+do
+{
+	최초 한번은 무조건 실행
+} while (조건식);
+```
+
+```solidity
+//SPDX-License-Identifier : MIT
+pragma solidity ^0.8.14;
+
+contract DoWhileLoop{
+	uint[] data;
+	uint8 j =0;
+	
+	function loop(
+	) public returns(uint[] memory){
+	do {
+		j++;
+		data.push(j);
+	}while(j < 0);
+	return data;
+	}
+}
+
+//data == [1]
+```
+
+do-while문은 반복문의 끝에 조건식 검사가 있기 때문에, 조건식이 거짓인 경우에도 **적어도 한번은 무조건 실행**한다는 특징이 있다.
+
+- for
+
+- continue
+
+  continue는 반복문 실행 도중 나머지 코드를 건너뛰고 싶을 때 사용한다.
+
+  while, do-while, for문 안에 사용할 수 있다.
+
+  ```solidity
+  while(조건식){
+  	조건식이 참이면 여기있는 코드 수행
+  	<새로운 조건>{
+  		continue;
+  		//아래코드를 실행하지 않고 건너뛴다.
+  	}
+  	카운터 값 증가
+  }
+  ```
+
+- break
+
+  break는 중간에 반복문을 멈추고 바깥으로 나가고 싶을 때 사용
+
+  while, do-while, for문 안에 사용할 수 있다.
