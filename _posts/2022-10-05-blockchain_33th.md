@@ -41,9 +41,9 @@ DIDs는 마스터키를 활용하여 만들 수 있으며, 누구나 DID 메소�
   DID 메소드는 특정 분산 원장 또는 네트워크에서 DID와 관련된 DID 문서들을 생성, 읽기, 갱신, 그리고 비활성화하는 메커니즘이다.
 
 - **DID 형식**
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005133938886.png" alt="image-20221005133938886" style="zoom:50%;" />
-
+  </center>
   - did : 문자열이 did이믈 나타내며, 이 주소가 did 스키마에 따른 것임을 나타낸다. 항상 did로 시작
   - example : did 메소드의 이름이고, did는 메소드별로 다르게 처리된다.
   - 123456789abcdefghi : DID 메소드 안에서 사용되는 고유 아이디이다.
@@ -51,9 +51,9 @@ DIDs는 마스터키를 활용하여 만들 수 있으며, 누구나 DID 메소�
   - ID와 관련된 정보는 did 문서에 담겨있다.
 
 - **DID 문서 내용**
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005134206805.png" alt="image-20221005134206805" style="zoom:50%;" />
-
+  </center>
   DID 문서 내용의 핵심적인 정보는 id의 제어권, 소유권 등을 증명할 수 있는 공개키와 인증정보이다.
 
   - id : 이 did 문서를 설명하고 있는 아이디이다.
@@ -64,9 +64,9 @@ DIDs는 마스터키를 활용하여 만들 수 있으며, 누구나 DID 메소�
   **중요한 것은 어떤 개인정보도 저장하지 않는다는 점이다.**
 
 - **DID Registry**
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005134440241.png" alt="image-20221005134440241" style="zoom:50%;" />
-
+  </center>
   만약 각 DID 메소드가 다르고, DID를 사용하는 블록체인 플랫폼이 모두 다른 상황에서 DID Document를 가져온다면 굉장히 복잡해진다. 이러한 문제점을 해결할 방법이 W3C 공식문서 DID Registry 파트에 담겨있다.
 
 - **DIF 글로벌 조직**
@@ -83,9 +83,9 @@ DIDs는 마스터키를 활용하여 만들 수 있으며, 누구나 DID 메소�
   - 소유자인 나는 회사에 응답으로 인증정보가 포함된 DID를 전달한다.
   - 회사는 응답받은 DID로 Universal Resolver에서 DID document를 가져온다.
   - DID document 안에 기록된 인증정보로 소유자에게 받았던 response를 검사하여 확인한다.
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005135036047.png" alt="image-20221005135036047" style="zoom: 33%;" />
-
+  </center>
   위 그림과 같이 누군가의 신원을 검증하고자 할때, Universal Resolver에 있는 DID document에서 인증정보를 가져와 DID 소유자의 소유권을 확인할 수 있다.
 
   소유자가 제시한 DID와 Universal Resolver의 DID document 안에 기록된 정보를 서로 확인한다. 이를 통해 소유자가 제시한 정보의 진위여부를 확인하는 절차를 거친다.
@@ -101,9 +101,9 @@ SSI는 블록체인을 기반으로 자신을 증명할 수 있는 정보를 스
 SSI는 스스로가 독립적인 권한을 가진 신원, 다시 말해 '자신이 스스로 부여한 신원'이다. 신원의 소유권을 가진 주체가 신원에 대한 권리를 가지고 공개대상과 범위를 선택할 수 있는 개념이다.
 
 #### 신원 관리 모델의 종류
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005163108743.png" alt="image-20221005163108743" style="zoom:33%;" />
-
+</center>
 - 1세대 개별 신원 모델(Siloed Identity)
 
   개별신원모델은 개별 서비스(인터파크, 11번가 등)마다 이용자의 아이디와 패스워드를 저장하고 신원확인 서비스를 제공하는 형태이다.
@@ -113,9 +113,9 @@ SSI는 스스로가 독립적인 권한을 가진 신원, 다시 말해 '자신�
   - 개인이 개별 사이트 ID, Password 관리해야함
   - 개별 서비스 제공자 정보보호의무 가중, 천문학적 비용 발생
   - 개인정보 유출 우려
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005163446890.png" alt="image-20221005163446890" style="zoom:33%;" />
-
+  </center>
 - 2세대 연합형 신원 모델(Federated Identity)
 
   연합형 신원 모델은 구글과 카카오 같은 연합신원을 제공하는 기업이 신원 확인 서비스를 제공하는 모델이다.
@@ -126,9 +126,9 @@ SSI는 스스로가 독립적인 권한을 가진 신원, 다시 말해 '자신�
   - 글로벌 기업의 개인정보 독접적 확보
   - 사용자 개인정보에 대한 권리 주장 어려움
   - 개인정보가 독점되고 계속하여 유출 위험성 존재
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005163700476.png" alt="image-20221005163700476" style="zoom:33%;" />
-
+  </center>
 - 3세대 자기 주권 신원 모델(Self-Sovereign Identity)
 
   자기 주권 신원은 개인이 디지털 상의 신원 주권을 가지게 될때, 개인정보를자신 스스로 소유하는 개념이다.
@@ -149,9 +149,9 @@ SSI는 스스로가 독립적인 권한을 가진 신원, 다시 말해 '자신�
   - 통합된 분산원장 관리가 가능하다면 확장성이 더 높음
   - 신원확인 정보를 블록체인에 공유하여 신원확인이 필요한 서비스를 활용할 때 사용
   - 비밀번호를 잃어버렸을 경우, 다시 찾기 어려움
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005164331324.png" alt="image-20221005164331324" style="zoom:50%;" />
-
+  </center>
 
 
 
@@ -177,9 +177,9 @@ SSI를 구성하는 4가지 개념
   아이디의 소유자가 어떤 것을 할 수 있는 자격을 갖추었음을 검증하는 방법을 다룬다.
 
 #### SSI를 구현하기 위한 요소
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005165528857.png" alt="image-20221005165528857" style="zoom:50%;" />
-
+</center>
 1. Issuer(발행자) : 발행자
 
    Issuer는 신원 정보를 발급하는 주체이다. Verifiable Credential(검증가능한 크리덴셜, 이하 VC)을 발행하는 주체이며, 정보 주체의 요구에 의해 신원정보와 DID를 발급하는 기관이다. 발행자는 발급한 정보에 대해 신뢰할 수 있는 신원정보를 전달한다.
@@ -213,14 +213,14 @@ Credential은 신원 확인에 필요한 정보이다.
   디지털 세계에서 신원정보는 데이터로 표현할 수 있으며, 각 단위 데이터를 Claim이라고 하며, 아래와 같이 주체-속성:값의 구조를 가진다.
 
   예를 들어 A라는 주체(Subject)의 이름으라는 속성(Property)은 김블록이라는 값(Value)을 가진다. 라는 문장이 하나의 Claim이 된다.
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005170910854.png" alt="image-20221005170910854" style="zoom:33%;" />
-
+  </center>
   Claim은 다른 Claim과 결합하여 아래와 같은 연결정보(Graph of Information)를 생성할 수 있다.
   아래의 도식을 해석하면, 'Pat은 Example 대학의 졸업생입니다.'라는 정보를 확인할 수 있다. 또 'Sam의 직업은 교수이다.'라는 Claim에 'Pat은 Sam을 알고 있다'는 정보를 추가하면 'Example 대학교 졸업생인 Pat은 교수인 Sam을 알고 있다.'는 연결 정보를 도출할 수 있게 된다.
-
+  <center>
   <img src="../../images/2022-10-05-blockchain_33th/image-20221005172426288.png" alt="image-20221005172426288" style="zoom:33%;" />
-
+  </center>
 - W3C 문서의 Credential
 
   DID체계에서는 Credential을 주체에 대한 하나 혹은 그 이상의 Claim으로 구성된 데이터의 집합이라고 정의할 수 있다.
@@ -240,17 +240,17 @@ Credential은 신원 확인에 필요한 정보이다.
 #### VC
 
 탈중앙 신원체계에서는 단순히 Credential이 아닌 검증가능한 Credential이라고 표현한다. Verifiable Credential(검증가능한 크레덴셜)은 아래와 같은 구조를 띤다.
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005171450233.png" alt="image-20221005171450233" style="zoom:33%;" />
-
+</center>
 - Credential Metadata : Credential을 해석할 수 있도록 설명해주는 메타데이터
 - Claim(s): 주체에 대한 Claim 집합
 - Proofs : Credential을 검증가능하도록 만드는 암호학적 요소들이 포함된 증명
 
 이러한 기록은 분산원장 플랫폼을 기반으로 한다. 따라서 분산원장 상에 기록된 각 주체의 전자 서명을 확인하면서, 궁극적으로 개인이 제시하고 있는 신원정보가 발급된 사실과 다르지 않다는 것을 검증할 수 있도록 한다.
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005171951215.png" alt="image-20221005171951215" style="zoom:50%;" />
-
+</center>
 Verifiable Crendential 그래프
 
 - Claim으로 정보를 확인하고, Digital Proof를 통해 검증
@@ -272,13 +272,13 @@ SSi의 핵심은 프라이버시 보호이다. 주민등록증을 VC로 만든�
 그런데 특정 상황에서 모든 정보를 제공해아 하는 경우는 거의 없다.
 
 이때 자기 주권 신원에서는 최소한의 정보공개를 원칙으로 하여 증명이 필요한 정보들로만 구성된 새로운 형식이 필요하다. 그것이 바로 VP이다.
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005172836005.png" alt="image-20221005172836005" style="zoom:33%;" />
-
+</center>
 편의점에서 맥주 한캔을 구매한다고 가정하고 VP를 통해 선택적으로 나이만 공개한다면 19세 이상이라는 사실여부만 선택적으로 공개할 수 있게 된다.
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005172937682.png" alt="image-20221005172937682" style="zoom:50%;" />
-
+</center>
 ### Ecosystem of Verifiable Credential(검증가능한 크리덴셜 생태계)
 
 하나 이상의 VC를 발급하고, 스마트폰 앱의 디지털 지갑의 VC를 저장한다. Verifier에게 증명하기 위해 VC 중 필요한 정보를 VP로 구성한다. 검증자에게 VP로 검증한다.
@@ -309,9 +309,9 @@ Verifier
 - 위의 내용들을 검증하여 VP 내용의 사실 여부를 검증한다.
 
 #### DID 기술을 활용한 입사 지원 시나리오
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005173925355.png" alt="image-20221005173925355" style="zoom:50%;" />
-
+</center>
 1. 입사지원자(holder)는 대학교(Issuer)에 본인의 졸업 정보(ex, 학위번호, 학위명, 수여 일자 등)를 요청한다.
 2. 대학교(Issuer)는 요청정보를 확인하고 문제가 없다고 판단되면 Digital Signature(전자서명) 후 입사지원자(holder)에게 졸업증명서(Verifiable Credential)를 발행한다.
 3. 이때, 대학교(Issuer)의 DID 정보가 졸업증명서(Verifiable Credential)에 함께 저장된다.
