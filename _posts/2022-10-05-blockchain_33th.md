@@ -197,3 +197,123 @@ SSI를 구성하는 4가지 개념
 4. Verifiable Data Registry(검증데이터 저장소) : 블록체인 등 분산 저장소
 
    정보 주체의 식별자와 Issuer의 인증서, 신원증명 해지내역, 신원 증명 스미카 등이 등록된 분산원장 기반의 데이터 무결성이 확보된 저장소이다. Verifiable Data Registry(검증데이터 저장소)는 반드시 블록체인일 필요는 없으며, Holder, Issuer, Verifier가 합의한 분산원장이면 사용할 수 있다.
+
+### Verifiable Credential(검증가능한 크리덴셜)
+
+Credential은 신원 확인에 필요한 정보이다.
+
+물리적 Credential로는 주민등록, 운전면허, 여권 등으로 신원을 주장하는데 디지털 세계에서는 사용할 수 없기 때문에 이러한 문제를 해결하고자 ㄴ온 표준이 W3C의 Verifiable Credentials Data Model이다.
+
+자기주권 신원(SSI)체계에서는 디지털 세계에서 개인의 신원을 증명할 수 있는 체계를 검증가능한 크리덴셜이라 한다. 검증가능한 크리덴셜의 목적은 디지털 세계에서의 크리덴셜을 통해 물리적 세계의 신분증과 동일한 정보를 제공하는 것이다.
+
+#### VC 구성요소
+
+- 클레임(Claim)
+
+  디지털 세계에서 신원정보는 데이터로 표현할 수 있으며, 각 단위 데이터를 Claim이라고 하며, 아래와 같이 주체-속성:값의 구조를 가진다.
+
+  예를 들어 A라는 주체(Subject)의 이름으라는 속성(Property)은 김블록이라는 값(Value)을 가진다. 라는 문장이 하나의 Claim이 된다.
+
+  <img src="../../images/2022-10-05-blockchain_33th/image-20221005170910854.png" alt="image-20221005170910854" style="zoom:33%;" />
+
+  Claim은 다른 Claim과 결합하여 아래와 같은 연결정보(Graph of Information)를 생성할 수 있다.
+  아래의 도식을 해석하면, 'Pat은 Example 대학의 졸업생입니다.'라는 정보를 확인할 수 있다. 또 'Sam의 직업은 교수이다.'라는 Claim에 'Pat은 Sam을 알고 있다'는 정보를 추가하면 'Example 대학교 졸업생인 Pat은 교수인 Sam을 알고 있다.'는 연결 정보를 도출할 수 있게 된다.
+
+  <img src="../../images/2022-10-05-blockchain_33th/image-20221005172426288.png" alt="image-20221005172426288" style="zoom:33%;" />
+
+- W3C 문서의 Credential
+
+  DID체계에서는 Credential을 주체에 대한 하나 혹은 그 이상의 Claim으로 구성된 데이터의 집합이라고 정의할 수 있다.
+
+  예를 들어 주민등록증의 신원 정보를 확인하여 생각해볼 수 있다.
+
+  - 이름
+  - 주민등록번호
+  - 주소
+  - 발급 일자
+  - 발급 주체
+
+  등이 담겨있고 이 각각의 신원정보가 클레임이다. 이러한 클레임들이 모여 크리덴셜이 된다.
+
+
+
+#### VC
+
+탈중앙 신원체계에서는 단순히 Credential이 아닌 검증가능한 Credential이라고 표현한다. Verifiable Credential(검증가능한 크레덴셜)은 아래와 같은 구조를 띤다.
+
+<img src="../../images/2022-10-05-blockchain_33th/image-20221005171450233.png" alt="image-20221005171450233" style="zoom:33%;" />
+
+- Credential Metadata : Credential을 해석할 수 있도록 설명해주는 메타데이터
+- Claim(s): 주체에 대한 Claim 집합
+- Proofs : Credential을 검증가능하도록 만드는 암호학적 요소들이 포함된 증명
+
+이러한 기록은 분산원장 플랫폼을 기반으로 한다. 따라서 분산원장 상에 기록된 각 주체의 전자 서명을 확인하면서, 궁극적으로 개인이 제시하고 있는 신원정보가 발급된 사실과 다르지 않다는 것을 검증할 수 있도록 한다.
+
+<img src="../../images/2022-10-05-blockchain_33th/image-20221005171951215.png" alt="image-20221005171951215" style="zoom:50%;" />
+
+Verifiable Crendential 그래프
+
+- Claim으로 정보를 확인하고, Digital Proof를 통해 검증
+- Issuer와 Holder의 Digital Signature(전자 서명) 포함
+- 발급 내역이 Data Registry에 쓰이며, 취소된 Credential인지 아닌지 확인
+- 제대로 된 포맷인지 Schema 검증
+
+**이를 통해 검증가능한 크레덴셜은 적합한 발급자인지 확인하기 위해 다음의 4가지를 확인한다.**
+
+- Issuer가 발급한 DID인지 진위여부
+- Holder의 DID인지 진위여부
+- 블록체인의 발급내역이 유효, 무효 여부
+- Schema 확인을 통해 형식이 맞는지를 확인
+
+### Verifiable Presentation(검증가능한 프레젠테이션)
+
+SSi의 핵심은 프라이버시 보호이다. 주민등록증을 VC로 만든다면, 주민등록증의 모든 Claim들이 VC에 포함되어 있을 것이다.
+
+그런데 특정 상황에서 모든 정보를 제공해아 하는 경우는 거의 없다.
+
+이때 자기 주권 신원에서는 최소한의 정보공개를 원칙으로 하여 증명이 필요한 정보들로만 구성된 새로운 형식이 필요하다. 그것이 바로 VP이다.
+
+<img src="../../images/2022-10-05-blockchain_33th/image-20221005172836005.png" alt="image-20221005172836005" style="zoom:33%;" />
+
+편의점에서 맥주 한캔을 구매한다고 가정하고 VP를 통해 선택적으로 나이만 공개한다면 19세 이상이라는 사실여부만 선택적으로 공개할 수 있게 된다.
+
+<img src="../../images/2022-10-05-blockchain_33th/image-20221005172937682.png" alt="image-20221005172937682" style="zoom:50%;" />
+
+### Ecosystem of Verifiable Credential(검증가능한 크리덴셜 생태계)
+
+하나 이상의 VC를 발급하고, 스마트폰 앱의 디지털 지갑의 VC를 저장한다. Verifier에게 증명하기 위해 VC 중 필요한 정보를 VP로 구성한다. 검증자에게 VP로 검증한다.
+
+<img src="../../images/2022-10-05-blockchain_33th/image-20221005173310995.png" alt="image-20221005173310995" style="zoom:50%;" />
+
+#### 자기 신원 인증 과정
+
+Issuer
+
+- Issuer는 Holder에 대한 검증 가능한 크리덴셜(VC)을 발급하여 전달한다.
+- VC의 유효성을 확인할 수 있는 ID와 Schema의 발급 내역을 블록체인에 기록한다.
+
+Holder
+
+- Issuer에게 VC를 받고 자신이 증명서를 받았다는 내용과 스키마 정보를 가져온다.
+- Verifier가 필요로 하는 정보를 담아 VP 형태로 보낸다.
+
+Verifier
+
+- Verifier는 VP내용과 블록체인에서 내용을 확인한다.
+  - 블록체인
+    - 발급 내역
+    - Schema
+  - VP
+    - Issuer DID
+    - Holder DID
+- 위의 내용들을 검증하여 VP 내용의 사실 여부를 검증한다.
+
+#### DID 기술을 활용한 입사 지원 시나리오
+
+<img src="../../images/2022-10-05-blockchain_33th/image-20221005173925355.png" alt="image-20221005173925355" style="zoom:50%;" />
+
+1. 입사지원자(holder)는 대학교(Issuer)에 본인의 졸업 정보(ex, 학위번호, 학위명, 수여 일자 등)를 요청한다.
+2. 대학교(Issuer)는 요청정보를 확인하고 문제가 없다고 판단되면 Digital Signature(전자서명) 후 입사지원자(holder)에게 졸업증명서(Verifiable Credential)를 발행한다.
+3. 이때, 대학교(Issuer)의 DID 정보가 졸업증명서(Verifiable Credential)에 함께 저장된다.
+4. 입사지원자(Holder)는 인증서를 모바일 전자지갑에 보관하며, 입사 지원 시 인증서에 Digital Signature(전자서명)하여 지원기업(Verifier)에 제출한다.
+5. 지원기업(Verifier)은 입사지원자(Holder)와 대학교(Issuer)의 DID를 통해 블록체인에 저장된 Digital Signature(전자서명) 검증정보를 전달받아 졸업증명서(Verifiable Credential)의 졸업정보를 확인한다.
