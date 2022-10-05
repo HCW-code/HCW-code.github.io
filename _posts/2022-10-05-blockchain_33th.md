@@ -282,9 +282,9 @@ SSi의 핵심은 프라이버시 보호이다. 주민등록증을 VC로 만든�
 ### Ecosystem of Verifiable Credential(검증가능한 크리덴셜 생태계)
 
 하나 이상의 VC를 발급하고, 스마트폰 앱의 디지털 지갑의 VC를 저장한다. Verifier에게 증명하기 위해 VC 중 필요한 정보를 VP로 구성한다. 검증자에게 VP로 검증한다.
-
+<center>
 <img src="../../images/2022-10-05-blockchain_33th/image-20221005173310995.png" alt="image-20221005173310995" style="zoom:50%;" />
-
+</center>
 #### 자기 신원 인증 과정
 
 Issuer
