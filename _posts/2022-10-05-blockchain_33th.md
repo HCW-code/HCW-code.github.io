@@ -178,7 +178,7 @@ SSI를 구성하는 4가지 개념
 
 #### SSI를 구현하기 위한 요소
 <center>
-<img src="../../images/2022-10-05-blockchain_33th/image-20221005165528857.png" alt="image-20221005165528857" style="zoom:50%;" />
+<img src="../../images/2022-10-05-blockchain_33th/image-20221005165528857.png" alt="image-20221005165528857" style="zoom:40%;" />
 </center>
 1. Issuer(발행자) : 발행자
 
