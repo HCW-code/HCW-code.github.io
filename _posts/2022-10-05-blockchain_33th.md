@@ -317,3 +317,142 @@ Verifier
 3. 이때, 대학교(Issuer)의 DID 정보가 졸업증명서(Verifiable Credential)에 함께 저장된다.
 4. 입사지원자(Holder)는 인증서를 모바일 전자지갑에 보관하며, 입사 지원 시 인증서에 Digital Signature(전자서명)하여 지원기업(Verifier)에 제출한다.
 5. 지원기업(Verifier)은 입사지원자(Holder)와 대학교(Issuer)의 DID를 통해 블록체인에 저장된 Digital Signature(전자서명) 검증정보를 전달받아 졸업증명서(Verifiable Credential)의 졸업정보를 확인한다.
+
+
+
+
+
+### DID를 활용한 졸업증명서 개발
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.10;
+
+abstract contract OwnerHelper {
+    address private owner;
+
+  	event OwnerTransferPropose(address indexed _from, address indexed _to);
+
+  	modifier onlyOwner {
+		require(msg.sender == owner);
+		_;
+  	}
+
+  	constructor() {
+		owner = msg.sender;
+  	}
+
+  	function transferOwnership(address _to) onlyOwner public {
+        require(_to != owner);
+        require(_to != address(0x0));
+    	owner = _to;
+    	emit OwnerTransferPropose(owner, _to);
+  	}
+}
+
+abstract contract IssuerHelper is OwnerHelper {
+    mapping(address => bool) public issuers;
+
+    event AddIssuer(address indexed _issuer);
+    event DelIssuer(address indexed _issuer);
+
+    modifier onlyIssuer {
+        require(isIssuer(msg.sender) == true);
+        _;
+    }
+
+    constructor() {
+        issuers[msg.sender] = true;
+    }
+
+    function isIssuer(address _addr) public view returns (bool) {
+        return issuers[_addr];
+    }
+
+    function addIssuer(address _addr) onlyOwner public returns (bool) {
+        require(issuers[_addr] == false);
+        issuers[_addr] = true;
+        emit AddIssuer(_addr);
+        return true;
+    }
+
+    function delIssuer(address _addr) onlyOwner public returns (bool) {
+        require(issuers[_addr] == true);
+        issuers[_addr] = false;
+        emit DelIssuer(_addr);
+        return true;
+    }
+}
+
+contract CredentialBox is IssuerHelper {
+    uint256 private idCount;
+    mapping(uint8 => string) private alumniEnum;
+    mapping(uint8 => string) private statusEnum;
+
+    struct Credential{
+        uint256 id;
+        address issuer;
+        uint8 alumniType;
+        uint8 statusType;
+        string value;
+        uint256 createDate;
+    }
+
+    mapping(address => Credential) private credentials;
+
+    constructor() {
+        idCount = 1;
+        alumniEnum[0] = "SEB";
+        alumniEnum[1] = "BEB";
+        alumniEnum[2] = "AIB";
+    }
+
+    function claimCredential(address _alumniAddress, uint8 _alumniType, string calldata _value) onlyIssuer public returns(bool){
+        Credential storage credential = credentials[_alumniAddress];
+        require(credential.id == 0);
+        credential.id = idCount;
+        credential.issuer = msg.sender;
+        credential.alumniType = _alumniType;
+        credential.statusType = 0;
+        credential.value = _value;
+        credential.createDate = block.timestamp;
+
+        idCount += 1;
+
+        return true;
+    }
+
+    function getCredential(address _alumniAddress) public view returns (Credential memory){
+        return credentials[_alumniAddress];
+    }
+
+    function addAlumniType(uint8 _type, string calldata _value) onlyIssuer public returns (bool) {
+        require(bytes(alumniEnum[_type]).length == 0);
+        alumniEnum[_type] = _value;
+        return true;
+    }
+
+    function getAlumniType(uint8 _type) public view returns (string memory) {
+        return alumniEnum[_type];
+    }
+
+    function addStatusType(uint8 _type, string calldata _value) onlyIssuer public returns (bool){
+        require(bytes(statusEnum[_type]).length == 0);
+        statusEnum[_type] = _value;
+        return true;
+    }
+
+    function getStatusType(uint8 _type) public view returns (string memory) {
+        return statusEnum[_type];
+    }
+
+    function changeStatus(address _alumni, uint8 _type) onlyIssuer public returns (bool) {
+        require(credentials[_alumni].id != 0);
+        require(bytes(statusEnum[_type]).length != 0);
+        credentials[_alumni].statusType = _type;
+        return true;
+    }
+
+}
+```
+
