@@ -2,7 +2,7 @@
 layout: single
 title: "[블록체인] Web3"
 categories: blockchain
-tag: [web]
+tag: [web3]
 toc: true
 
 ---
