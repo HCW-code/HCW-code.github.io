@@ -40,9 +40,11 @@ EIP-1139에서 지정한 이더리움 공급자 객체는 브라우저 내에서
 <center>
 <img src="../../images/2022-10-10-blockchain_35th/image-20221011001853137.png" alt="image-20221011001853137" style="zoom:50%;" />
 </center>
-### Infura
+#### Infura
 
 **블록 동기화 없이 원격 이더리움 노드에 접근하기**
+
+https://infura.io/
 
 Infura는 원격 이더리움 노드를 통해 이더리움 네트워크에 접근할 수 있게 해주는 서비스이다. Infura에서는 RPC URL과 API Key를 제공하기 때문에, 직접 이더리움 네트워크에 접근하여 블록을 동기화하지 않아도 네트워크에 접근할 수 있다.
 
@@ -53,3 +55,21 @@ Infura는 원격 이더리움 노드를 통해 이더리움 네트워크에 접�
 - Project ID : API Key이다.
 - Project Secret : 프로젝트의 비밀 키이다.
 - Endpoints : 원격 이더리움 노드를 통해 이더리움 네트워크에 접속할 수 있는 URL이다.
+
+#### Etherscan API
+
+etherscan : https://etherscan.io/ 에서 API키를 가져온다.
+
+공식문서 : https://docs.etherscan.io/
+
+이더스캔에서드 Infura와 같은 이더리움 개발자에게 노드 환경을 제공하는 이더스캔 API를 제공한다.
+
+해당 키를 사용하면 GET/POST 요청 방식으로 이더 스캔 API를 사요할 수 있다.
+
+#### Coingecko
+
+Coingecko는 암호화폐의 시가총액과 시세를 제공한다.
+
+Coingecko에서는 실시간 가격, 거래량, 과거 데이터, 컨트랙트 정보와 같은 다양한 데이터를 API형태로 제공한다.
+
+https://www.coingecko.com/ko
