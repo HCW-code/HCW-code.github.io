@@ -1,15 +1,15 @@
 ---
 layout: single
-title: "[node.js] 입력받기"
+title: "[node.js] 입력 받기, Math함수, Array 함수"
 categories: codingtest
 tag: [codingtest, node.js]
 toc: true
 
 ---
 
-## 입력 받기
+### 입력 받기
 
-### fs모듈
+#### fs모듈
 
 한줄 입력
 
@@ -46,5 +46,17 @@ for(let i = 1; i <= count; i++){
 }
 ```
 
+### Math 함수
 
+- Math.ceil() : 소수점 올림, 정수 반환
+- Math.floor() : 소수점 버림, 정수 반환
+- Math.round() : 소수점 반올림, 정수 반환
 
+### Array 함수
+
+```js
+let fruits = new Array(2)
+
+console.log(fruits.length) // 2
+console.log(fruits[0])     // undefined
+```
