@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[node.js] 입력받기"
-categories: project
+categories: codingtest
 tag: [codingtest, node.js]
 toc: true
 
