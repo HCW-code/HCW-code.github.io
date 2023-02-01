@@ -1,10 +1,9 @@
 ---
 layout: single
-title: "[CodingTest] node.js 입력받기"
+title: "[node.js] 입력받기"
 categories: project
-tag: [project, advertisement, YouTube]
+tag: [codingtest, node.js]
 toc: true
-
 
 ---
 
