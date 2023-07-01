@@ -72,7 +72,7 @@ K = logN 이 된다.
 
 ### 탐색
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230630174039774.png" alt="image-20230630174039774" style="zoom:50%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230630174039774.png" alt="image-20230630174039774" style="zoom:50%;" />
 
 - 루트노드에서부터 시작해서 노드를 메모리에 로드 시켜서 데이터를 탐색한다.
 - 해당 데이터가 노드에 없으면 기준에 맞는 포인터를 이용하여 다음 블록을 메모리에 로드하여 다시 찾습니다.
@@ -85,7 +85,7 @@ K = logN 이 된다.
 - 만약 부모노드가 오버플로우 시 반복작업하며 올라간다.
 - 최종 루트 노드에서도 마찬가지로 동작하며 루트노드가 분리되면서 레벨이 올라가게 된다.
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230701103428580.png" alt="image-20230701103428580" style="zoom:33%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230701103428580.png" alt="image-20230701103428580" style="zoom:33%;" />
 
 이해가 안가는것
 
@@ -105,13 +105,13 @@ leaf node이면서 현재 node의 key 수가 최소보다 큰 경우에는 단�
 
  부모노드에서 키값을 가져오고 부모노드에 왼쪽에서 가져온다면 가장 큰 형제노드 것으로 바꿔주고 오른쪽에서 가져온다면 가장 작은 형제노드것으로 바꿔준다.
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230630215355758.png" alt="image-20230630215355758" style="zoom: 33%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230630215355758.png" alt="image-20230630215355758" style="zoom: 33%;" />
 
 **K**를 **par**로 바꿔준다. 그리고 **par**를 왼쪽 형제 node의 key 수가 최소보다 크다면 **Lmax**로, 오른쪽 형제 node의 key 수가 최소보다 크다면 **Rmin**로 바꿔준다. 
 
 **1-3) 현재 node와 왼쪽, 오른쪽 형제 node의 key 수가 최소이고, 부모 node의 key 수가 최소보다 큰 경우**
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230630215426785.png" alt="image-20230630215426785" style="zoom:33%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230630215426785.png" alt="image-20230630215426785" style="zoom:33%;" />
 
 **K**를 삭제하고, **par**를 부모 node에서 분할하여 형제 node와 합쳐준다. 그러면 부모 node의 key 수가 하나 줄고, 자식 node의 수도 하나 줄어들어 B-Tree 조건을 유지한다.
 
@@ -127,15 +127,15 @@ leaf node이면서 현재 node의 key 수가 최소보다 큰 경우에는 단�
 
 **K**의 **Lmax** 또는 **Rmin**과 자리를 바꿔준다. 그러고 나면 leaf node에서의 **K** 삭제와 동일해진다. 
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230630215723358.png" alt="image-20230630215723358" style="zoom:33%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230630215723358.png" alt="image-20230630215723358" style="zoom:33%;" />
 
 **2-2) 현재 node와 자식 node 모두 key 수가 최소인 경우**
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230630215915559.png" alt="image-20230630215915559" style="zoom:33%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230630215915559.png" alt="image-20230630215915559" style="zoom:33%;" />
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230630221926558.png" alt="image-20230630221926558" style="zoom:33%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230630221926558.png" alt="image-20230630221926558" style="zoom:33%;" />
 
-<img src="../images/2023-06-29-algorithm_btree/image-20230630221952217.png" alt="image-20230630221952217" style="zoom:33%;" />
+<img src="../../images/2023-06-29-algorithm_btree/image-20230630221952217.png" alt="image-20230630221952217" style="zoom:33%;" />
 
 ### 성능
 
